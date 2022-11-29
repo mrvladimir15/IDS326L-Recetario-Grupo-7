@@ -5,14 +5,10 @@
       "Antlr4.Runtime.Standard/4.9.2": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/Antlr4.Runtime.Standard.dll": {}
         }
       }
     }
@@ -38,24 +34,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vladimir González\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Deivy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vladimir González\\Documents\\GitHub\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
+      "projectUniqueName": "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
       "projectName": "IDS326L-RecetarioSQL-Grupo7",
-      "projectPath": "C:\\Users\\Vladimir González\\Documents\\GitHub\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
-      "packagesPath": "C:\\Users\\Vladimir González\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vladimir González\\Documents\\GitHub\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\obj\\",
+      "projectPath": "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
+      "packagesPath": "C:\\Users\\Deivy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Vladimir González\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Deivy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -102,7 +93,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

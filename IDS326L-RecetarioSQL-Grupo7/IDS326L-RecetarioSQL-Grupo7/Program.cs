@@ -27,7 +27,7 @@ string receta = @"- RECETA: Pudin de pan
 	4) Licuar
 	5) Beberselo en el vaso de la licuadora
 	6) Fin
-- RECETA: Pudin de pan
+- RECETA: Pizza
 - PORCIONES: 2 jartones
 - CALORIAS: 2000 calorias
 - INGREDIENTES:
@@ -43,4 +43,67 @@ var parser = new recetaParserParser(tokenStream);
 var tree = parser.recetaParser();
 
 recetaVisitor recetaVisitor= new recetaVisitor();
-recetaVisitor.Visit(tree);
+recetario recetario =  recetaVisitor.Visit(tree);
+
+Dictionary<string, int> unitIng = new Dictionary<string, int>();
+unitIng.Add("cucharadita", 1);
+unitIng.Add("cucharada", 2);
+unitIng.Add("taza", 3);
+unitIng.Add("tazas", 3);
+
+int recipeIndex = 0;
+int ingredientsIndex = 1;
+int ccoking_stepsIndex = 1;
+foreach (receta item in recetario.recetas)
+{
+	recipeIndex++;
+	List<string> porciones = item.porciones.Split(" ").ToList();
+	List<string> tiempococc = new List<string>();
+	string tiempococcion;
+	if (item.tiempoCoccion != null)
+	{
+		tiempococc = item.tiempoCoccion.Split(" ").ToList();
+		tiempococcion = $"{tiempococc[0]}, '{tiempococc[1]}'";
+	}
+	else
+    {
+		tiempococcion = $"null, null";
+	}
+
+	string script = $@"";
+	script += @$"
+	-- Receta: {item.tituloReceta}
+INSERT INTO recipes (id, name, portions, prep_time, prep_time_unit, cook_time, cook_time_unit, calories)
+VALUES ({recipeIndex}, '{item.tituloReceta}', {porciones[0]}, {tiempococcion}, {item.calorias});
+";
+	foreach (string ingrediente in item.ingredientes)
+	{
+		string IngInfo;
+		var ingredientes = ingrediente.Split(" ");
+
+		if (ingredientes.Contains("tazas") || ingredientes.Contains("taza") || ingredientes.Contains("cucharada") || ingredientes.Contains("cucharadita"))
+		{
+			ingredientes = ingrediente.Split(" ", 3);
+			IngInfo = $"'{ingredientes[2]}', {ingredientes[0]}, {unitIng[ingredientes[1]]}";
+		}
+		else
+		{
+			ingredientes = ingrediente.Split(" ", 2);
+			IngInfo = $"'{ingredientes[1]}', {ingredientes[0]}, null";
+        }
+
+
+
+		script += $"INSERT INTO ingredients (id, recipe_id, name, quantity, unit_id) VALUES ({ingredientsIndex}, {recipeIndex}, {IngInfo});\n";
+		ingredientsIndex++;
+	}
+	int steps = 1;
+    foreach (string prep in item.elaboracion)
+    {
+		script += $"INSERT INTO cooking_steps (id, recipe_id, step_number, description) VALUES({ccoking_stepsIndex}, {recipeIndex}, {steps}, '{prep}');\n";
+		steps++;
+		ccoking_stepsIndex++;
+    }
+    Console.WriteLine(script);
+}
+

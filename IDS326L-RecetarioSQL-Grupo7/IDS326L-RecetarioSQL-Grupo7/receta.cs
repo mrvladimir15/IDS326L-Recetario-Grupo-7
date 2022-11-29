@@ -16,4 +16,9 @@ namespace IDS326L_RecetarioSQL_Grupo7
         public List<string> ingredientes { get; set; }
         public List<string> elaboracion { get; set; }
     }
+
+    internal class recetario
+    {
+        public List<receta> recetas { get; set; } = new List<receta>();
+    }
 }

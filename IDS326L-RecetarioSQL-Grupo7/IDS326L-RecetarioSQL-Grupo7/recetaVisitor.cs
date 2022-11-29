@@ -8,15 +8,18 @@ using System.Threading.Tasks;
 
 namespace IDS326L_RecetarioSQL_Grupo7
 {
-    internal class recetaVisitor : recetaParserBaseVisitor<string>
+    internal class recetaVisitor : recetaParserBaseVisitor<recetario>
     {
-        public override string VisitCalorias([NotNull] recetaParserParser.CaloriasContext context)
+        receta receta = new receta();
+        recetario recetario = new recetario();
+
+        public override recetario VisitCalorias([NotNull] recetaParserParser.CaloriasContext context)
         {
-            //Console.WriteLine(context.GetText());
+            receta.calorias = context.GetText().Replace("- CALORIAS: ", "");
             return base.VisitCalorias(context);
         }
 
-        public override string VisitElaboracion([NotNull] recetaParserParser.ElaboracionContext context)
+        public override recetario VisitElaboracion([NotNull] recetaParserParser.ElaboracionContext context)
         {
             Regex regex = new Regex("([0-9][)])");
             var lista = regex.Split(context.GetText());
@@ -27,60 +30,57 @@ namespace IDS326L_RecetarioSQL_Grupo7
 
             for (int i = 0; i < lista.Length; i += 2)
             {
-                //lista[i] = lista[i] + lista[i + 1];
-                pasos.Add(lista[i]);
+                pasos.Add(lista[i].Trim());
             }
+            pasos.Remove("");
+            receta.elaboracion = pasos.ToList();
+            recetario.recetas.Add(receta);
 
+            receta = new receta();
             return base.VisitElaboracion(context);
         }
 
-        public override string VisitIngredientes([NotNull] recetaParserParser.IngredientesContext context)
+        public override recetario VisitIngredientes([NotNull] recetaParserParser.IngredientesContext context)
         {
-            var lista = context.GetText().Split(',');
+            List<string> lista = context.GetText().Split(',').ToList();
             lista[0] = lista[0].Replace("- INGREDIENTES:", "");
 
-            foreach (var item in lista)
-            {
-                Console.WriteLine(item);
-            }
+            receta.ingredientes = lista;
             return base.VisitIngredientes(context);
         }
 
-        public override string VisitPorciones([NotNull] recetaParserParser.PorcionesContext context)
+        public override recetario VisitPorciones([NotNull] recetaParserParser.PorcionesContext context)
         {
-            //Console.WriteLine(context.GetText());
+            receta.porciones = context.GetText().Replace("- PORCIONES: ", "");
             return base.VisitPorciones(context);
         }
 
-        public override string VisitReceta([NotNull] recetaParserParser.RecetaContext context)
+        public override recetario VisitReceta([NotNull] recetaParserParser.RecetaContext context)
         {
             return base.VisitReceta(context);
         }
 
-        public override string VisitRecetaParser([NotNull] recetaParserParser.RecetaParserContext context)
+        public override recetario VisitRecetaParser([NotNull] recetaParserParser.RecetaParserContext context)
         {
-            return base.VisitRecetaParser(context);
+            base.VisitRecetaParser(context);
+            return recetario;
         }
 
-        public override string VisitTiempo_coccion([NotNull] recetaParserParser.Tiempo_coccionContext context)
+        public override recetario VisitTiempo_coccion([NotNull] recetaParserParser.Tiempo_coccionContext context)
         {
-            if (context.GetText() != null)
-                Console.WriteLine("Distinto de nulo");
-            else
-                Console.WriteLine("Nulo");
-            //Console.WriteLine(context.GetText());
+            receta.tiempoCoccion = context.GetText().Replace("- TIEMPO COCCION: ", "");
             return base.VisitTiempo_coccion(context);
         }
 
-        public override string VisitTiempo_preparacion([NotNull] recetaParserParser.Tiempo_preparacionContext context)
+        public override recetario VisitTiempo_preparacion([NotNull] recetaParserParser.Tiempo_preparacionContext context)
         {
-            //Console.WriteLine(context.GetText());
+            receta.tiempoPreparacion = context.GetText().Replace("- TIEMPO PREPARACION: ", "");
             return base.VisitTiempo_preparacion(context);
         }
 
-        public override string VisitTitulo([NotNull] recetaParserParser.TituloContext context)
+        public override recetario VisitTitulo([NotNull] recetaParserParser.TituloContext context)
         {
-            //Console.WriteLine(context.GetText());
+            receta.tituloReceta = context.GetText().Replace("- RECETA: ", "");
             return base.VisitTitulo(context);
         }
     }

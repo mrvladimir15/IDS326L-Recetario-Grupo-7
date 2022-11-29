@@ -15,3 +15,20 @@ C:\Users\Vladimir González\Documents\GitHub\IDS326L-Recetario-Grupo-7\IDS326L-R
 C:\Users\Vladimir González\Documents\GitHub\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.pdb
 C:\Users\Vladimir González\Documents\GitHub\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.genruntimeconfig.cache
 C:\Users\Vladimir González\Documents\GitHub\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\ref\IDS326L-RecetarioSQL-Grupo7.dll
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\bin\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.exe
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\bin\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.deps.json
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\bin\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.runtimeconfig.json
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\bin\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.dll
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\bin\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.pdb
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\bin\Debug\net6.0\Antlr4.Runtime.Standard.dll
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.csproj.AssemblyReference.cache
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.AssemblyInfoInputs.cache
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.AssemblyInfo.cs
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.csproj.CoreCompileInputs.cache
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.csproj.CopyComplete
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.dll
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\refint\IDS326L-RecetarioSQL-Grupo7.dll
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.pdb
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\IDS326L-RecetarioSQL-Grupo7.genruntimeconfig.cache
+C:\Users\Deivy\Source\Repos\IDS326L-Recetario-Grupo-7\IDS326L-RecetarioSQL-Grupo7\IDS326L-RecetarioSQL-Grupo7\obj\Debug\net6.0\ref\IDS326L-RecetarioSQL-Grupo7.dll
