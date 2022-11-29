@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oztu9EtIWGFPM6FfWOfPMjrbLA7W1VK/f8cv/k8mxgcjFNRwbE13uqE07QjPyrikPJ1c4xamse9jPE28GJhqxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vladimir González\\Documents\\GitHub\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vladimir González\\.nuget\\packages\\antlr4.runtime.standard\\4.9.2\\antlr4.runtime.standard.4.9.2.nupkg.sha512"
+  ],
+  "logs": []
+}
