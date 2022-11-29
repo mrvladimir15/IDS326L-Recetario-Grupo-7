@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace IDS326L_RecetarioSQL_Grupo7
@@ -17,7 +18,19 @@ namespace IDS326L_RecetarioSQL_Grupo7
 
         public override string VisitElaboracion([NotNull] recetaParserParser.ElaboracionContext context)
         {
-            //Console.WriteLine(context.GetText());
+            Regex regex = new Regex("([0-9][)])");
+            var lista = regex.Split(context.GetText());
+            
+            List<string> pasos = new List<string>();
+
+            lista[0] = lista[0].Replace("- ELABORACION:", "");
+
+            for (int i = 0; i < lista.Length; i += 2)
+            {
+                //lista[i] = lista[i] + lista[i + 1];
+                pasos.Add(lista[i]);
+            }
+
             return base.VisitElaboracion(context);
         }
 

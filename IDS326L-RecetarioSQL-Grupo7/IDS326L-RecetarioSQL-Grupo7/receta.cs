@@ -8,5 +8,12 @@ namespace IDS326L_RecetarioSQL_Grupo7
 {
     internal class receta
     {
+        public string tituloReceta { get; set; }
+        public string porciones { get; set; }
+        public string? tiempoPreparacion { get; set; } = null;
+        public string? tiempoCoccion { get; set; } = null;
+        public string calorias { get; set; }
+        public List<string> ingredientes { get; set; }
+        public List<string> elaboracion { get; set; }
     }
 }
