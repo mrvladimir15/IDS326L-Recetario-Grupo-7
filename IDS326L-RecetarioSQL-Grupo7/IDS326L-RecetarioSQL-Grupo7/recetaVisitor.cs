@@ -11,21 +11,31 @@ namespace IDS326L_RecetarioSQL_Grupo7
     {
         public override string VisitCalorias([NotNull] recetaParserParser.CaloriasContext context)
         {
+            //Console.WriteLine(context.GetText());
             return base.VisitCalorias(context);
         }
 
         public override string VisitElaboracion([NotNull] recetaParserParser.ElaboracionContext context)
         {
+            //Console.WriteLine(context.GetText());
             return base.VisitElaboracion(context);
         }
 
         public override string VisitIngredientes([NotNull] recetaParserParser.IngredientesContext context)
         {
+            var lista = context.GetText().Split(',');
+            lista[0] = lista[0].Replace("- INGREDIENTES:", "");
+
+            foreach (var item in lista)
+            {
+                Console.WriteLine(item);
+            }
             return base.VisitIngredientes(context);
         }
 
         public override string VisitPorciones([NotNull] recetaParserParser.PorcionesContext context)
         {
+            //Console.WriteLine(context.GetText());
             return base.VisitPorciones(context);
         }
 
@@ -41,16 +51,23 @@ namespace IDS326L_RecetarioSQL_Grupo7
 
         public override string VisitTiempo_coccion([NotNull] recetaParserParser.Tiempo_coccionContext context)
         {
+            if (context.GetText() != null)
+                Console.WriteLine("Distinto de nulo");
+            else
+                Console.WriteLine("Nulo");
+            //Console.WriteLine(context.GetText());
             return base.VisitTiempo_coccion(context);
         }
 
         public override string VisitTiempo_preparacion([NotNull] recetaParserParser.Tiempo_preparacionContext context)
         {
+            //Console.WriteLine(context.GetText());
             return base.VisitTiempo_preparacion(context);
         }
 
         public override string VisitTitulo([NotNull] recetaParserParser.TituloContext context)
         {
+            //Console.WriteLine(context.GetText());
             return base.VisitTitulo(context);
         }
     }
