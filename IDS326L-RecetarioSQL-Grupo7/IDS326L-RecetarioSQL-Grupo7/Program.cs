@@ -41,6 +41,8 @@ var lexer = new recetaParserLexer(inputStream);
 var tokenStream = new CommonTokenStream(lexer);
 var parser = new recetaParserParser(tokenStream);
 var tree = parser.recetaParser();
+string script = "";
+
 
 recetaVisitor recetaVisitor= new recetaVisitor();
 recetario recetario =  recetaVisitor.Visit(tree);
@@ -59,44 +61,53 @@ foreach (receta item in recetario.recetas)
 	recipeIndex++;
 	List<string> porciones = item.porciones.Split(" ").ToList();
 	List<string> tiempococc = new List<string>();
+	List<string> tiempoprep = new List<string>();
+	string cookandprep = "";
 	string tiempococcion;
-	if (item.tiempoCoccion != null)
+	string tiempopreparacion;
+	if (item.tiempoCoccion != null && item.tiempoCoccion != null)
 	{
 		tiempococc = item.tiempoCoccion.Split(" ").ToList();
-		tiempococcion = $"{tiempococc[0]}, '{tiempococc[1]}'";
+		tiempoprep = item.tiempoPreparacion.Split(" ").ToList();
+		tiempococcion = $", {tiempococc[0]}, '{tiempococc[1]}', ";
+		tiempopreparacion = $"{tiempoprep[0]}, '{tiempoprep[1]}'";
+		cookandprep = "prep_time, prep_time_unit, cook_time, cook_time_unit, ";
 	}
 	else
     {
-		tiempococcion = $"null, null";
+		tiempococcion = $"";
+		tiempopreparacion = "";
 	}
 
-	string script = $@"";
 	script += @$"
 	-- Receta: {item.tituloReceta}
-INSERT INTO recipes (id, name, portions, prep_time, prep_time_unit, cook_time, cook_time_unit, calories)
-VALUES ({recipeIndex}, '{item.tituloReceta}', {porciones[0]}, {tiempococcion}, {item.calorias});
-";
+INSERT INTO recipes (id, name, portions, {cookandprep}calories)" +
+$"\nVALUES ({recipeIndex}, '{item.tituloReceta}', {porciones[0]}, {tiempopreparacion}{tiempococcion}{item.calorias});\n";
 	foreach (string ingrediente in item.ingredientes)
 	{
 		string IngInfo;
 		var ingredientes = ingrediente.Split(" ");
+		string unitid;
 
 		if (ingredientes.Contains("tazas") || ingredientes.Contains("taza") || ingredientes.Contains("cucharada") || ingredientes.Contains("cucharadita"))
 		{
+			unitid = ", unit_id";
 			ingredientes = ingrediente.Split(" ", 3);
 			IngInfo = $"'{ingredientes[2]}', {ingredientes[0]}, {unitIng[ingredientes[1]]}";
 		}
 		else
 		{
+			unitid = "";
 			ingredientes = ingrediente.Split(" ", 2);
-			IngInfo = $"'{ingredientes[1]}', {ingredientes[0]}, null";
+			IngInfo = $"'{ingredientes[1]}', {ingredientes[0]}";
         }
 
 
 
-		script += $"INSERT INTO ingredients (id, recipe_id, name, quantity, unit_id) VALUES ({ingredientsIndex}, {recipeIndex}, {IngInfo});\n";
+		script += $"INSERT INTO ingredients (id, recipe_id, name, quantity{unitid}) VALUES ({ingredientsIndex}, {recipeIndex}, {IngInfo});\n";
 		ingredientsIndex++;
 	}
+	//script += "\n";
 	int steps = 1;
     foreach (string prep in item.elaboracion)
     {
@@ -105,5 +116,6 @@ VALUES ({recipeIndex}, '{item.tituloReceta}', {porciones[0]}, {tiempococcion}, {
 		ccoking_stepsIndex++;
     }
     Console.WriteLine(script);
+	script = "";
 }
 

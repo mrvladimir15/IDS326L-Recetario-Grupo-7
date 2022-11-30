@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj": {}
+    "C:\\Users\\Deivy\\source\\repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj": {
+    "C:\\Users\\Deivy\\source\\repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
+        "projectUniqueName": "C:\\Users\\Deivy\\source\\repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
         "projectName": "IDS326L-RecetarioSQL-Grupo7",
-        "projectPath": "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
+        "projectPath": "C:\\Users\\Deivy\\source\\repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7.csproj",
         "packagesPath": "C:\\Users\\Deivy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Deivy\\Source\\Repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\obj\\",
+        "outputPath": "C:\\Users\\Deivy\\source\\repos\\IDS326L-Recetario-Grupo-7\\IDS326L-RecetarioSQL-Grupo7\\IDS326L-RecetarioSQL-Grupo7\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Deivy\\AppData\\Roaming\\NuGet\\NuGet.Config",
